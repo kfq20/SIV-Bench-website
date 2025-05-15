@@ -45,6 +45,20 @@ nav a:hover {
     padding: 2rem 1rem;
     background: #e9ecef;
 }
+.hero-section {
+    text-align: center;
+    padding: 3rem 1rem; /* Or your desired padding */
+    background: #e9ecef; /* Or your chosen hero background */
+
+    /* --- New lines to control width and center --- */
+    width: 50%;         /* Set the width to 50% of its containing block */
+    /* max-width: 700px;   Optional: A max-width if you don't want it to become too large on very wide screens, even at 50%. Adjust as needed. */
+    margin-left: auto;  /* Center the block by setting left and right margins to auto */
+    margin-right: auto; /* Center the block */
+    border-radius: 10px; /* Optional: if you want rounded corners for this 50% block */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: a subtle shadow for the hero block */
+    margin-bottom: 30px; /* Optional: space below the hero section before the navbar or main content */
+}
 
 .hero-section h1 {
     font-size: 2.5rem;
@@ -73,7 +87,7 @@ nav a:hover {
 }
 
 main {
-    width: 80%;
+    width: 50%;
     margin: 20px auto;
     overflow: hidden;
     padding: 0 20px;
