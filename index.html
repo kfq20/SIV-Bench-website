@@ -9,8 +9,18 @@
 <body>
     <header>
         <div class="hero-section">
-            <h1>SIV-Bench: A Benchmark for Understanding Social Interactions in Videos</h1>
-            <p>Advancing Multimodal Large Language Models towards Deeper Social Intelligence</p>
+            <h1>SIV-Bench: A Video Benchmark for Social Interaction Understanding and Reasoning</h1>
+            <div class="author-information">
+                <span class="author"><a href="[LINK_FANQI]" target="_blank">Fanqi Kong</a><sup>1,2</sup>,</span>
+                <span class="author"><a href="[LINK_WEIQIN]" target="_blank">Weiqin Zu</a><sup>3</sup>,</span>
+                <span class="author"><a href="[LINK_XINYU]" target="_blank">Xinyu Chen</a><sup>1</sup>,</span>
+                <span class="author"><a href="[LINK_YAODONG]" target="_blank">Yaodong Yang</a><sup>1</sup>,</span>
+                <span class="author"><a href="[LINK_SONGCHUN]" target="_blank">Song-Chun Zhu</a><sup>1,2</sup>,</span>
+                <span class="author"><a href="[LINK_XUEFENG]" target="_blank">Xue Feng</a><sup>2</sup></span>
+                </div>
+            <div class="affiliations">
+                <p><sup>1</sup>Peking University &nbsp;&nbsp;&nbsp; <sup>2</sup>Beijing Institute for General Artificial Intelligence &nbsp;&nbsp;&nbsp; <sup>3</sup>ShanghaiTech University</p> &nbsp;&nbsp;&nbsp; 
+                </div>
             <div class="quick-links">
                 <a href="https://www.overleaf.com/project/67eeb003c222ff75e0522329" class="icon-btn arxiv-btn" target="_blank">
                     <img src="images/arxiv-logomark-small.svg" alt="arXiv Icon" class="btn-icon"> Paper
@@ -29,7 +39,7 @@
                 <li><a href="#framework-section">Our Framework</a></li>
                 <li><a href="#dataset-section">The SIV-Bench Dataset</a></li>
                 <li><a href="#results-section">Experiments & Results</a></li>
-                <li><a href="#downloads-section">Downloads</a></li>
+                <!-- <li><a href="#downloads-section">Downloads</a></li> -->
                 <li><a href="#citation-section">Citation</a></li>
             </ul>
         </nav>
@@ -74,6 +84,13 @@
                 <img src="images/video.jpg" alt="Figure: Video Statistics of SIV-Bench" style="width:100%; max-width:800px;">
                 <p class="caption"><b>Video Statistics:</b> Illustrating diversity in (a) social relation types, (b) video lengths (avg. 32.49s), and (c) represented languages.</p>
             </div>
+            <p>
+                The construction of SIV-Bench follows a meticulous pipeline, encompassing initial data collection through keyword-driven video sourcing and manual review, followed by a comprehensive QA generation and filtering process leveraging both LLM automation and human oversight.
+            </p>
+            <div class="figure-container">
+                <img src="images/pipeline.png" alt="Figure: Construction Pipeline of SIV-Bench" style="width:100%; max-width:800px;">
+                <p class="caption"><b>Construction Pipeline:</b> SIV-Bench construction pipeline, detailing data collection process (left), and QA generation & filtering (right).</p>
+            </div>
         </section>
 
         <section id="results-section">
@@ -83,7 +100,7 @@
             </p>
             <div class="figure-container">
                 <img src="images/main_results.jpg" alt="Table: Main Results" style="width:100%; max-width:900px;">
-                <p class="caption"><b>Main Results Table:</b> MLLM accuracy (%) on SSU, SSR, SDP, and Overall scores across three subtitle conditions. Scores represent accuracy percentages (%).</p>
+                <p class="caption"><b>Main Results Table:</b> MLLM accuracy (%) on SSU, SSR, SDP, and Overall scores across three subtitle conditions.</p>
             </div>
             <p class="results-summary">
                 Models generally excel at SSU but significantly struggle with SSR, especially Relation Inference. Top models show notable strength in SDP's counterfactual reasoning. Transcribed subtitles (`+sub`) consistently aid comprehension of complex inferences, while their removal (`-sub`) typically hinders performance.
@@ -94,7 +111,7 @@
             </div>
         </section>
 
-        <section id="downloads-section">
+        <!-- <section id="downloads-section">
             <h2>Downloads & Code</h2>
             <p>The SIV-Bench dataset and evaluation code are publicly available to foster further research in social AI:</p>
             <ul>
@@ -102,7 +119,7 @@
                 <li><strong>Hugging Face Dataset:</strong> <a href="https://huggingface.co/datasets/Fancylalala/SIV-Bench" target="_blank">https://huggingface.co/datasets/Fancylalala/SIV-Bench</a></li>
             </ul>
             <p>The code and dataset were provided with our OpenReview submission, ensuring they are executable and documented for reproducibility.</p>
-        </section>
+        </section> -->
 
         <section id="citation-section">
             <h2>Citation</h2>

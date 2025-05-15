@@ -102,6 +102,12 @@ main section {
 main section:last-child {
     border-bottom: none;
 }
+main section h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Added a bit more space below the heading */
+    font-size: 2em;      /* Example: Make section titles a bit larger */
+    color: var(--primary-color); /* Using the primary color variable we discussed */
+}
 
 h2 {
     color: #007bff;
@@ -335,3 +341,60 @@ h1, h2 { color: var(--primary-color); }
     color: #333; /* Dark text for contrast on yellow */
 }
 /* Ensure huggingface icon is dark for this background */
+.hero-section h1 {
+    font-size: 2.2rem; /* Adjusted for space */
+    margin-bottom: 15px;
+}
+
+.author-information {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.0rem; /* Slightly smaller for author list */
+    line-height: 1.7;  /* Increased line height for readability if it wraps */
+    text-align: center; /* This will center the block of authors */
+}
+
+.author {
+    /* display: inline-block; /* This can also work instead of span's default inline */
+    margin-right: 5px; /* Space after the comma if you add commas */
+    white-space: nowrap; /* Try to keep name and superscript together */
+}
+
+.author a {
+    color: #333;
+    text-decoration: none;
+    font-weight: normal; /* Regular weight, or 500 if preferred */
+}
+
+.author a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.author sup {
+    margin-left: 1px; /* Tiny space before superscript */
+}
+
+.affiliations {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 0.9rem; /* Smaller for affiliations */
+    color: #555;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.affiliations p {
+    margin: 2px 0; /* Small margin between affiliation lines if on separate <p> */
+    display: inline; /* If you want affiliations to also try and be on one line */
+    margin-right: 15px; /* Space between affiliations if inline */
+}
+
+.affiliations p:last-child {
+    margin-right: 0;
+}
+
+.affiliations sup {
+    line-height: 0;
+    font-weight: bold; /* Make affiliation markers bold for clarity */
+}
