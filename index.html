@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIV-Bench: Social Interaction Video Benchmark</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="hero-section">
+            <h1>SIV-Bench: A Benchmark for Understanding Social Interactions in Videos</h1>
+            <p>Advancing Multimodal Large Language Models towards Deeper Social Intelligence</p>
+            <div class="quick-links">
+                <a href="https://www.overleaf.com/project/67eeb003c222ff75e0522329" class="icon-btn arxiv-btn" target="_blank">
+                    <img src="images/arxiv-logomark-small.svg" alt="arXiv Icon" class="btn-icon"> Paper
+                </a>
+                <a href="https://github.com/kfq20/SIV-Bench" class="icon-btn github-btn" target="_blank">
+                    <img src="images/github-mark.svg" alt="GitHub Icon" class="btn-icon"> Code
+                </a>
+                <a href="https://huggingface.co/datasets/Fancylalala/SIV-Bench" class="icon-btn huggingface-btn" target="_blank">
+                    <img src="images/hf-logo.svg" alt="Hugging Face Icon" class="btn-icon"> Dataset
+                </a>
+            </div>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#overview-section">Overview</a></li>
+                <li><a href="#framework-section">Our Framework</a></li>
+                <li><a href="#dataset-section">The SIV-Bench Dataset</a></li>
+                <li><a href="#results-section">Experiments & Results</a></li>
+                <li><a href="#downloads-section">Downloads</a></li>
+                <li><a href="#citation-section">Citation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="overview-section">
+            <h2>Welcome to SIV-Bench</h2>
+            <p>
+                Human social interaction is rich and multifaceted. SIV-Bench is a novel video benchmark designed to rigorously evaluate how well Multimodal Large Language Models (MLLMs) comprehend these complex social dynamics. We assess capabilities across scene understanding, state reasoning, and dynamics prediction.
+            </p>
+            <div class="figure-container">
+                <img src="images/main.png" alt="Figure 1: Snapshot of SIV-Bench" style="width:100%; max-width:900px;">
+                <p class="caption"><b>Figure 1:</b> SIV-Bench overview: Illustrating video diversity by social relationship models and sample QAs for Social Scene Understanding (SSU), Social State Reasoning (SSR), and Social Dynamics Prediction (SDP).</p>
+            </div>
+        </section>
+
+        <section id="framework-section">
+            <h2>Our Analytical Framework</h2>
+            <p>SIV-Bench evaluates MLLMs across three core, interrelated dimensions, grounded in the understanding that social relationships fundamentally shape interactions:</p>
+            <div class="framework-grid"> <div class="framework-item">
+                    <h3>Social Scene Understanding (SSU)</h3>
+                    <p>Perceiving observable elements: actions, expressions, environment, and attributes.</p>
+                </div>
+                <div class="framework-item">
+                    <h3>Social State Reasoning (SSR)</h3>
+                    <p>Inferring unobservable mental states: emotions, intentions, attitudes, and relationships.</p>
+                </div>
+                <div class="framework-item">
+                    <h3>Social Dynamics Prediction (SDP)</h3>
+                    <p>Anticipating how interactions evolve or would change under alternative (counterfactual) conditions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="dataset-section">
+            <h2>The SIV-Bench Dataset</h2>
+            <p>
+                Our dataset comprises 2,792 real-world video clips representing 14 distinct social relationship types (grounded in Fiske's Relational Models Theory). It features diverse genres, presentation styles, and linguistic/cultural backgrounds, with 8,792 high-quality QAs from a human-LLM pipeline. Videos are presented under three subtitle conditions (`origin`, `+sub`, `-sub`) to test textual cue impact.
+            </p>
+            <div class="figure-container">
+                <img src="images/video.jpg" alt="Figure: Video Statistics of SIV-Bench" style="width:100%; max-width:800px;">
+                <p class="caption"><b>Video Statistics:</b> Illustrating diversity in (a) social relation types, (b) video lengths (avg. 32.49s), and (c) represented languages.</p>
+            </div>
+        </section>
+
+        <section id="results-section">
+            <h2>Key Experimental Results</h2>
+            <p>
+                We evaluated leading MLLMs using VLMEvalKit. Key findings highlight current strengths and areas for improvement in social AI:
+            </p>
+            <div class="figure-container">
+                <img src="images/main_results.jpg" alt="Table: Main Results" style="width:100%; max-width:900px;">
+                <p class="caption"><b>Main Results Table:</b> MLLM accuracy (%) on SSU, SSR, SDP, and Overall scores across three subtitle conditions. Scores represent accuracy percentages (%).</p>
+            </div>
+            <p class="results-summary">
+                Models generally excel at SSU but significantly struggle with SSR, especially Relation Inference. Top models show notable strength in SDP's counterfactual reasoning. Transcribed subtitles (`+sub`) consistently aid comprehension of complex inferences, while their removal (`-sub`) typically hinders performance.
+            </p>
+            <div class="figure-container">
+                <img src="images/radar.png" alt="Figure: Radar Chart of Fine-grained Performance" style="width:100%; max-width:700px;">
+                <p class="caption"><b>Fine-grained Performance:</b> MLLM capabilities vary across our 10 detailed social understanding sub-tasks.</p>
+            </div>
+        </section>
+
+        <section id="downloads-section">
+            <h2>Downloads & Code</h2>
+            <p>The SIV-Bench dataset and evaluation code are publicly available to foster further research in social AI:</p>
+            <ul>
+                <li><strong>GitHub Repository (Code & Instructions):</strong> <a href="https://github.com/kfq20/SIV-Bench" target="_blank">https://github.com/kfq20/SIV-Bench</a></li>
+                <li><strong>Hugging Face Dataset:</strong> <a href="https://huggingface.co/datasets/Fancylalala/SIV-Bench" target="_blank">https://huggingface.co/datasets/Fancylalala/SIV-Bench</a></li>
+            </ul>
+            <p>The code and dataset were provided with our OpenReview submission, ensuring they are executable and documented for reproducibility.</p>
+        </section>
+
+        <section id="citation-section">
+            <h2>Citation</h2>
+            <p>If you use SIV-Bench in your research, please cite our paper:</p>
+            <pre><code>
+arXiv preprint coming soon
+            </code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; [2025] [Fanqi Kong / Peking University]. All rights reserved. | Contact: kfq20@stu.pku.edu.cn</p>
+    </footer>
+
+    <script>
+        // Simple script for smooth scrolling and active nav link
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Active link highlighting based on scroll position
+        const sections = document.querySelectorAll('main section');
+        const navLi = document.querySelectorAll('nav ul li a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) { // 60 is a bit of offset for the sticky nav
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLi.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === `#${current}`) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
