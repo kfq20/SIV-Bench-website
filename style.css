@@ -346,10 +346,17 @@ h1, h2 { color: var(--primary-color); }
     margin-bottom: 15px;
 }
 
-.author-information {
+.corresponding-author {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 1.0rem; /* Slightly smaller for author list */
+    text-align: center; /* This will center the block of authors */
+}
+
+.author-information {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* Slightly smaller for author list */
     line-height: 1.7;  /* Increased line height for readability if it wraps */
     text-align: center; /* This will center the block of authors */
 }
@@ -376,12 +383,12 @@ h1, h2 { color: var(--primary-color); }
 }
 
 .affiliations {
-    margin-top: 5px;
-    margin-bottom: 20px;
-    font-size: 0.9rem; /* Smaller for affiliations */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* Smaller for affiliations */
     color: #555;
     text-align: center;
-    line-height: 1.6;
+    /* line-height: 1.6; */
 }
 
 .affiliations p {
@@ -396,5 +403,5 @@ h1, h2 { color: var(--primary-color); }
 
 .affiliations sup {
     line-height: 0;
-    font-weight: bold; /* Make affiliation markers bold for clarity */
+    font-weight: normal; /* Make affiliation markers bold for clarity */
 }
